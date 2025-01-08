@@ -16,7 +16,7 @@ public sealed class Game : GameBase {
     int gameState = 0;
     int score = 0;
     int count = 0;
-    string pname = "t23040ta";
+    string pname = "userid";
     string url = "";
     string str = "";
     public override void InitGame() {
@@ -69,7 +69,7 @@ public sealed class Game : GameBase {
         }
         else if (gameState == 2) {
             if (gc.GetPointerFrameCount(0) == 1) {
-                url = "https://web.sfc.keio.ac.jp/~wadari/sdp/k07_web/score.cgi?score=" + score + "&name=" + pname;
+                url = "url_sample" + score + "&name=" + pname;
                 gc.GetOnlineTextAsync(url, out str);
                 ResetValues();
                 gameState = 0;
